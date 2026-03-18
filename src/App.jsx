@@ -29,7 +29,7 @@ function App() {
 
     const fetchPlayers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/players');
+            const response = await axios.get('https://football-stats-api-f2aj.onrender.com/api/players');
             setPlayers(response.data)
         } catch (err) {
             console.error("Hubo un error al conectar con el servidor", err);
@@ -49,7 +49,7 @@ function App() {
 
       if (editingId) {
         // SI ESTAMOS EN MODO EDICIÓN -> Hacemos PUT
-        await axios.put(`http://localhost:5000/api/players/${editingId}`, playerData);
+        await axios.put(`https://football-stats-api-f2aj.onrender.com/api/players/${editingId}`, playerData);
         setEditingId(null); // Apagamos el modo edición al terminar
 
         //Nuevo Alerta: Exito a la hora de actualizar
@@ -63,7 +63,7 @@ function App() {
 
       } else {
         // SI ES UN JUGADOR NUEVO -> Hacemos POST
-        await axios.post('http://localhost:5000/api/players', playerData);
+        await axios.post('https://football-stats-api-f2aj.onrender.com/api/players', playerData);
 
          Swal.fire({
             title: '¡Fichaje exitoso!', 
@@ -117,7 +117,7 @@ function App() {
         if (result.isConfirmed) {
             try {
                 //3.ENVIAR LA ORDEN: Usamos axios.delete y le pegamos el 'id' al final de la URL
-                await axios.delete(`http://localhost:5000/api/players/${id}`);
+                await axios.delete(`https://football-stats-api-f2aj.onrender.com/api/players/${id}`);
 
                 //4. ACTUALIZAR PANTALLA: Volvemos a pedir la lista de jugadores de la bd
                 fetchPlayers();
