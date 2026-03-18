@@ -1,0 +1,140 @@
+body{
+  margin: 0;
+  background-color: #f4f4f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+  text-align: center;
+  padding: 2rem;
+}
+
+h1{
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+/*El contenedor que agrupa las tarjetas*/
+.players-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/*El diseño individual de cada jugador*/
+.player-card{
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+/*Animacion al pasar el mouse por encima*/
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.player-card h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.player-card p {
+  color: #555;
+  margin: 8px 0;
+  font-size: 1.05rem;
+}
+
+.goals {
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  color: #27ae60 !important;
+  margin-top: 15px !important;
+}
+
+.player-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.player-form input, .player-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.player-form button {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.player-form button:hover {
+  background: #1a252f;
+}
+.delete-btn {
+  background-color: #e74c3c; /* Rojo intenso */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Oscurecer el botón al pasar el mouse */
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.edit-btn {
+  background-color: #3498db; /* Azul */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-right: 10px; /* Para separarlo del rojo */
+  width: 100%;
+  font-weight: bold;
+}
+.edit-btn:hover { background-color: #2980b9; }
+
+.search-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px; /* Bordes redondeados modernos */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #3498db; /* Cambia a azul al hacer clic */
+}
