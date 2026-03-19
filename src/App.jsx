@@ -146,9 +146,32 @@ function App() {
         return player.name.toLowerCase().includes(searchTerm.toLocaleLowerCase());
     });
 
+    //LÓGICA DEL PANEL DE ESTADISTICAS
+
+    //Sumamos todos los goles del arreglo 'players'
+    const totalGoals = players.reduce((acumulator, player) => {
+        return acumulator + Number(player.goals_scored || 0);
+    }, 0);
+
+    //Buscamos al jugador con el número maximo de goles
+    const topScorer =players.reduce((max, player)=> {
+        return (Number(player.goals_scored)> Number(max.goals_scored || 0)) ? player :max;
+    },{});
+
     return (
         <div className='container'>
             <h1>Leyendas del Fútbol Colombiano</h1>
+            {/*TARJETA DE ESTADISTICAS AQUI*/}
+            <div className='stats-card'>
+                <h3>Resumen del torneo</h3>
+                <p><strong>Total de Goles Históricos:</strong>{totalGoals}</p>
+
+                {topScorer.name && (
+                    <p><strong>Máximo Goleador:</strong> {topScorer.name} ({topScorer.goals_scored} goles)</p>
+                )}
+            </div>
+
+        
             {/* Formulario*/}
             <form onSubmit={handleCreatePlayer} className="player-form">
                 <h3>Agregar Nueva Leyenda</h3>

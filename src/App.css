@@ -138,3 +138,21 @@ h1{
 .search-input:focus {
     border-color: #3498db; /* Cambia a azul al hacer clic */
 }
+
+.stats-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.stats-card h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.stats-card p {
+    margin: 5px 0;
+}
