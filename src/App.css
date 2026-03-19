@@ -141,14 +141,17 @@ h1{
 
 .stats-card {
     background-color: #f8f9fa;
-    padding: 20px;
-    width: 500px;
-    margin: 0 auto 20px auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 20px 40px; /* Más espacio a los lados internos */
+    
+    /* ESTO ES LO MÁS IMPORTANTE */
+    width: fit-content;      /* Se ajusta solo al tamaño del texto */
+    min-width: 300px;        /* Pero que no sea demasiado chiquito */
+    margin: 0 auto 30px auto; /* Lo centra y le da espacio abajo */
+    
+    border-radius: 12px;
     border: 1px solid #dee2e6;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05)
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .stats-card h3 {
