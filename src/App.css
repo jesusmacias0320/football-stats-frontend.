@@ -159,3 +159,23 @@ h1{
 .stats-card p {
     margin: 5px 0;
 }
+
+.stats-card h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #3498db; /* Una línea azul decorativa */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Estilo específico para la línea del Máximo Goleador */
+.stats-card p:last-child {
+    background: linear-gradient(90deg, #fff2cc, #ffffff);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #856404; /* Un tono café/dorado para el texto */
+    border: 1px dashed #ffeeba;
+    margin-top: 10px;
+}
