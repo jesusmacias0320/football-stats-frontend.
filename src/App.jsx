@@ -162,7 +162,9 @@ function App() {
         <div className='container'>
             <h1>Leyendas del Fútbol Colombiano</h1>
             {/*TARJETA DE ESTADISTICAS AQUI*/}
-            <div className='stats-card'>
+            
+            <div className="stats-wrapper">
+                <div className='stats-card'>
                 <h3>Resumen del torneo</h3>
                 <p><strong>Total de Goles Históricos:</strong>{totalGoals}</p>
 
@@ -170,8 +172,8 @@ function App() {
                     <p><strong>Máximo Goleador:</strong> {topScorer.name} ({topScorer.goals_scored} goles)</p>
                 )}
             </div>
-
-        
+        </div>
+            
             {/* Formulario*/}
             <form onSubmit={handleCreatePlayer} className="player-form">
                 <h3>Agregar Nueva Leyenda</h3>

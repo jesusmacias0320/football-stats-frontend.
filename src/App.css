@@ -139,45 +139,24 @@ h1{
     border-color: #3498db; /* Cambia a azul al hacer clic */
 }
 
+.stats-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* 2. La tarjeta ahora está libre de la dictadura del contenedor principal */
 .stats-card {
     background-color: #f8f9fa;
     padding: 20px 40px;
-    
-    /* LA SOLUCIÓN CONTRA EL FLEXBOX PADRE */
-    align-self: center; 
-    max-width: max-content;
-    margin-bottom: 30px; 
-    
     border-radius: 12px;
     border: 1px solid #dee2e6;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .stats-card h3 {
     margin: 0 0 10px 0;
     color: #2c3e50;
-}
-
-.stats-card p {
-    margin: 5px 0;
-}
-
-.stats-card h3 {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1.1rem;
-    border-bottom: 2px solid #3498db; /* Una línea azul decorativa */
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Estilo específico para la línea del Máximo Goleador */
-.stats-card p:last-child {
-    background: linear-gradient(90deg, #fff2cc, #ffffff);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    color: #856404; /* Un tono café/dorado para el texto */
-    border: 1px dashed #ffeeba;
-    margin-top: 10px;
 }
