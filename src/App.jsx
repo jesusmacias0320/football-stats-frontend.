@@ -166,7 +166,7 @@ function App() {
             <div className="stats-wrapper">
                 <div className='stats-card'>
                 <h3>Resumen del torneo</h3>
-                <p><strong>Total de Goles Históricos:</strong>{totalGoals}</p>
+                <p><strong>Total de Goles Históricos: </strong>{totalGoals}</p>
 
                 {topScorer.name && (
                     <p><strong>Máximo Goleador:</strong> {topScorer.name} ({topScorer.goals_scored} goles)</p>
