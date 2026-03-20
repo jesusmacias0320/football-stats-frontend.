@@ -12,7 +12,6 @@ function App() {
     const [position, setPosition] = useState('');
     const [goals, setGoals] = useState('');
     const [teamId, setTeamId] = useState('');
-    const [imageUrl, setImageUrl] = useState(''); //Para agregar foto
     const [editingId, setEditingId] = useState(null); //Para que React recuerde que ID estamos editando
     const [searchTerm, setSearchTerm] = useState(''); // Este estado guardará el texto que el usuario escriba en el buscador
     
@@ -46,7 +45,7 @@ function App() {
     e.preventDefault();
     try {
       // Empaquetamos los datos del formulario
-      const playerData = { name, position, goals_scored: goals, team_id: teamId, imageUrl: imageUrl};
+      const playerData = { name, position, goals_scored: goals, team_id: teamId};
 
       if (editingId) {
         // SI ESTAMOS EN MODO EDICIÓN -> Hacemos PUT
@@ -79,7 +78,6 @@ function App() {
       setPosition('');
       setGoals('');
       setTeamId('');
-      setImageUrl(''); //Limpiamos el input de la foto
       
       // Volvemos a pedir la lista actualizada a PostgreSQL
       fetchPlayers();
@@ -238,14 +236,6 @@ function App() {
                     <div className="player-card" key={player.id}>
                         <h2>{player.name}</h2>
 
-                        {/*Renderizando condicional: Si hay URL, muestra la imagen*/}
-                        {player.image_url && (
-                            <img 
-                            src={player.imageUrl} 
-                            alt={`Foto de ${player.name}`}
-                            style ={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }} 
-                            />
-                        )}
                         <p><strong>Posición: </strong> {player.position}</p>
                         <p><strong>Equipo: </strong> {player.team_name}</p>
                         <p className="goals">⚽ Goles: {player.goals_scored}</p>
