@@ -211,11 +211,7 @@ function App() {
                     <option value="5">Atlético Nacional</option>
                     <option value="4">Selección Colombia</option>
                 </select>
-                <input type="text" 
-                placeholder="URL de la foto del jugador (Opcional)"
-                onChange={(e) => setImageUrl(e.target.value)}
-                />
-
+                
                 <button type="submit">Guardar jugador</button>
             </form>
 
